@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="database_setup.sql" />
+    <None Remove="*.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="CustomerDashboard.cs" />
+    <Compile Remove="ReportsDashboard.cs" />
+    <Compile Remove="CrystalReportsService.cs" />
+    <Compile Remove="CrystalReportViewerForm.cs" />
+    <Compile Remove="CrystalReportTemplates.cs" />
+    <Compile Remove="ReportParametersForm.cs" />
+  </ItemGroup>
+
+</Project>
